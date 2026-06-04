@@ -24,5 +24,6 @@ for i in range(6):
     df_titles = pd.concat([df_titles, df_section_titles], ignore_index=True)
 print(df_titles.head())
 df_titles.info()
+# 수집한 뉴드 헤드라인들을 CSV파일로 저장
 df_titles.to_csv('./data/naver_headline_news_{}.csv'.format(
     datetime.datetime.now().strftime('%Y%m%d')), index=False)
